@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto:700i');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+body {
+  background-color: #121212;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
+
+.section{
+    height: 75vh;
+    margin: 0;
+  scroll-margin-top: 1em;
+}
+
+
+
+header {
+  background: rgba(12,12,12,0.5);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  z-index: 2;
+}
+
+.news {  
+  border: 1px solid black;
+  background: rgba(12,12,12,0.5);
+  height: 400px;
+  width: 150px;  
+  position: fixed;  
+  top: 0;
+  right: 0;
+  margin-top: 23%;
+  color: #ed0707; 
+}
+
+.aside{
+  position: fixed; 
+  color: #ed0707; 
+  width: 100px;  
+  top: 0;
+  right: 0;
+}
+
+.prom{  
+  background: rgba(12,12,12,0.5);
+  border: 1px solid black;
+  color: #ed0707;  width: 150px;
+  margin-top: 23%;  float: right;
+  height: 320px;
+  z-index: 1;
+}
+
+h1 {
+  color: #ed0707;
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 50px;
+ position: relative;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ 
+nav ul li:hover > ul {
+  display: block;
+}
+nav a {
+  color: #fdfff5;
+  text-decoration: none;
+  font-size: 1.8em;
+  transition: all 0.3s ease;
+}
+
+
+nav a:hover {
+  color: #ccc;
+}
+
+.hero {
+  background-image: url(fon.png);
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fdfff5;
+}
+
+.hero h2 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+
+.moloko{
+  color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  background-color: #121212;
+}
+
+.moloko h3 {
+  color: #ed0707;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.menu {
+  padding: 10px;
+  text-align: center;
+  background: -webkit-linear-gradient(0deg, #121212,#cccccc,#121212,#cccccc,#121212);/* Chrome 10-25, Safari 5.1-6 */                          
+  background: linear-gradient(0deg, #121212,#cccccc,#121212,#cccccc,#121212);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+}
+
+button:hover {
+  transform: scale(1.05); /*увеличиваем блок на 5%*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /*добавляем тень*/
+}
+.menu h3 {
+  color: #ed0707;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.button-row {
+  display: flex; /* устанавливаем flex-контейнер */
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-row button {
+  flex: 1; /* равномерно распределяем место для каждой кнопки */
+  margin-right: 1px; /* добавляем отступ между кнопками, кроме последней */
+  display: inline-block; /* устанавливаем элемент в качестве инлайн-блока */
+  width: 70px; /* устанавливаем ширину кнопки */
+  height: 40px; /* устанавливаем высоту кнопки */
+  border: none; /* убираем границу у кнопки */
+  background-color: #121212;
+  border: 2px solid #ed0707;
+  color: #f5f5f5;  text-align: center; /* выравниваем содержимое по центру */
+  text-decoration: none; /* убираем подчеркивание ссылки */
+}
+
+.button-row button:last-child {
+  margin-right: 0; /* убираем отступ у последней кнопки */
+}
+
+.image{
+  display: block;
+  right: 0;
+  margin-left: auto; /* Устанавливаем отступ слева на всю доступную ширину */
+  position: absolute;
+  top: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  justify-content: center;
+  align-items: center; /* Центрируем содержимое по вертикали */
+  max-width: 600px;  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hidden-text {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  color: #121212;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  justify-content: center;
+  align-items: center; /* Центрируем содержимое по вертикали */
+  max-width: 400px;  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: justify;
+  padding: 20px;
+}
+
+.tn-atom, .tn-ato{
+  
+    color: #ed0707;
+    font-size: 16px;
+    font-family: 'Gilroy',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 400;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    padding-bottom: 10px;
+    
+}
+.many, .time {
+  color: #121212;
+  font-size: 16px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  padding-bottom: 10px;
+  z-index: 1;
+
+}
+#button-1{
+  margin-bottom: 460px;
+}
+
+#button-5{
+  margin-bottom: 500px;
+}
+
+
+
+.reservation {
+  padding: 50px;
+  background-image: url(fonzapis.jpg);
+    color: #fdfff5;
+  text-align: center;
+}
+
+.reservation h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.reservation form {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+label {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='time'],
+input[type='number'] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type='submit'] {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+
+.footer {
+  color: #fdfff5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ssulka {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img, .footer p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a {
+  color: #fdfff5;
+}
+
+a:hover {
+  color: #ed0707;
+}
+
+.btn-up { 
+  /* фиксированное позиционирование */ 
+  position: fixed; 
+  /* цвет фона */ 
+  background-color: #ed0707; 
+  /* расстояние от правого края окна браузера */ 
+  right: 20px; 
+  /* расстояние от нижнего края окна браузера */ 
+  bottom: 0; 
+  /* скругление верхнего левого угла */ 
+  border-top-left-radius: 8px; 
+  /* скругление верхнего правого угла */ 
+  border-top-right-radius: 8px; 
+  /* вид курсора */ 
+  cursor: pointer; 
+  /* отображение элемента как flex */ 
+  display: flex; 
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */ 
+  align-items: center; 
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */ 
+  justify-content: center; 
+  /* ширина элемента */ 
+  width: 60px; 
+  /* высота элемента */ 
+  height: 50px; 
+  z-index: 2;
+} 
+ 
+.btn-up::before { 
+  content: ""; 
+  width: 40px; 
+  height: 40px; 
+  background: transparent no-repeat center center; 
+  background-size: 100% 100%; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E"); 
+} 
+ 
+.btn-up_hide { 
+  display: none; 
+} 
+ 
+@media (hover: hover) and (pointer: fine) { 
+  .btn-up:hover { 
+    background-color: #ed0707; /* цвет заднего фона при наведении */ 
+  } 
+}

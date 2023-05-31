@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto:700i');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили */
+body {
+  background-color: #121212;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
+h1 {
+  color: #ed0707;
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* Стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
+
+  /* Шапка */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(12,12,12,0.5);
+    z-index: 2;
+  }
+  .news, .aside{
+    display: none;
+  }
+
+  /* Навигация */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  nav ul li:hover > ul {
+    display: none;
+  }
+
+  /* Меню */
+  .menu {
+    padding: 10px;
+    text-align: center;
+    background: -webkit-linear-gradient(0deg, #121212,#cccccc,#121212,#cccccc,#121212);/* Chrome 10-25, Safari 5.1-6 */                          
+    background: linear-gradient(0deg, #121212,#cccccc,#121212,#cccccc,#121212);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .button-row button {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  /* Контент */
+  .section {
+    height: auto;
+    margin: 0;
+    scroll-margin-top: 1em;
+  }
+
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .moloko h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .image {
+    position: static;
+    top: auto;
+    transform: translate(0, 0);
+    max-width: 100%;
+    margin-top: 10px;
+    
+  }
+
+  .hidden-text {
+    position: static;
+    top: auto;
+    transform: translate(0, 0);
+    max-width: 100%;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+
+  .tn-atom, .tn-ato {
+    font-size: 14px;
+  }
+
+  .many, .time {
+    font-size: 14px;
+  }
+
+  /* Футер */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #ssulka {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .footer img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn-up { 
+    right: 10px; 
+    bottom: 10px; 
+    width: 50px; 
+    height: 40px;
+  }
+
+}
